@@ -18,7 +18,7 @@ function vssafe { vsAlias /SafeMode }
 
 function vs { vsAlias $args }
 
-function todo { & todoAlias "c:\users\ryan\desktop\$args" }
+function todo { & todoAlias $home'\desktop\'$args }
 
 ###########################################################
 # Ding! Fries are done!
