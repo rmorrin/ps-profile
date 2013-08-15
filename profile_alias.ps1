@@ -1,7 +1,7 @@
 ###########################################################
 # Set up some aliases
 ###########################################################
-Set-Alias vsAlias ${Env:ProgramFiles(x86)}'\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe'
+Set-Alias vsAlias ${Env:ProgramFiles(x86)}'\Microsoft Visual Studio 10.0\Common7\IDE\devenv.exe'
 
 Set-Alias todoAlias ${Env:ProgramFiles(x86)}'\Git\Bin\touch.exe'
 
@@ -19,6 +19,8 @@ function vssafe { vsAlias /SafeMode }
 function vs { vsAlias $args }
 
 function todo { & todoAlias $home'\desktop\'$args }
+
+function gs { git status }
 
 ###########################################################
 # Ding! Fries are done!
