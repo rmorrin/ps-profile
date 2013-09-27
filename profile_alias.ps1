@@ -3,6 +3,8 @@
 ###########################################################
 Set-Alias vsAlias ${Env:ProgramFiles(x86)}'\Microsoft Visual Studio 10.0\Common7\IDE\devenv.exe'
 
+Set-Alias vs12Alias ${Env:ProgramFiles(x86)}'\Microsoft Visual Studio 11.0\Common7\IDE\VWDExpress.exe'
+
 Set-Alias todoAlias ${Env:ProgramFiles(x86)}'\Git\Bin\touch.exe'
 
 # Assumes 64bit installation of sublime text 2
@@ -18,9 +20,13 @@ function vssafe { vsAlias /SafeMode }
 
 function vs { vsAlias $args }
 
+function vs12 { vs12Alias $args }
+
 function todo { & todoAlias $home'\desktop\'$args }
 
 function gs { git status }
+
+function git-staged { git diff --cached --name-only }
 
 ###########################################################
 # Ding! Fries are done!
